@@ -1,0 +1,36 @@
+{
+  "meta": {
+    "creator": "cds-dk 6.6.0"
+  },
+  "$version": "2.0",
+  "definitions": {
+    "remoteService.Players": {
+      "kind": "entity",
+      "@cds.external": true,
+      "@cds.persistence.skip": true,
+      "elements": {
+        "name": {
+          "key": true,
+          "notNull": true,
+          "type": "cds.LargeString"
+        }
+      },
+      "@Capabilities.DeleteRestrictions": {
+        "$Type": "Capabilities.DeleteRestrictionsType",
+        "Deletable": false
+      },
+      "@Capabilities.InsertRestrictions": {
+        "$Type": "Capabilities.InsertRestrictionsType",
+        "Insertable": false
+      },
+      "@Capabilities.UpdateRestrictions": {
+        "$Type": "Capabilities.UpdateRestrictionsType",
+        "Updatable": false
+      }
+    },
+    "remoteService": {
+      "kind": "service",
+      "@cds.external": true
+    }
+  }
+}

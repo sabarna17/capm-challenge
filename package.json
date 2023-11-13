@@ -1,0 +1,43 @@
+{
+  "name": "cap-developer-challenge",
+  "version": "0.0.1",
+  "scripts": {
+    "start": "cds run",
+    "dev": "cds watch"
+  },
+  "dependencies": {
+    "@sap-cloud-sdk/http-client": "^3.3.0",
+    "@sap-cloud-sdk/resilience": "^3.3.0",
+    "@sap/cds": "^7",
+    "@sap/cds-dk": "^7",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@cap-js/sqlite": "^1.0.1"
+  },
+  "cds": {
+    "requires": {
+      "db": {
+        "kind": "sqlite",
+        "credentials": {
+          "database": "db/golf.db"
+        }
+      },
+      "auth": {
+        "kind": "basic",
+        "users": {
+          "sabarna17": {
+            "password": "sapcapmJun23"
+          }
+        }
+      },
+      "remoteService": {
+        "kind": "odata",
+        "model": "srv/external/remoteService",
+        "credentials": {
+          "url": "https://developer-advocates-free-tier-central-hana-cloud-instan3abe9a0e.cfapps.us10.hana.ondemand.com/browse/"
+        }
+      }
+    }
+  }
+}

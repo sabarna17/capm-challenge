@@ -1,0 +1,14 @@
+POST http://localhost:4004/browse/Holes
+Content-Type: application/json
+{
+    "par": 4,
+    "round_ID": "f6ecfc7d-601f-4575-a2cc-3352666a9414",
+    "shots":[
+        {
+            "shot_ID": ""
+        },
+        {
+            "shot_ID": ""
+        }
+    ]
+}​
